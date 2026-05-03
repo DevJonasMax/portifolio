@@ -39,7 +39,7 @@ export const DATA: Data = {
   profile: {
     name: "Jonas Max",
     headline: "Software Engineer ✦ Full-Stack Developer ✦ Gen AI Enthusiast",
-    avatarUrl: "/jonas-profile.webp",
+    avatarUrl: "./jonas-profile.webp",
   },
   links: [
     {
@@ -74,7 +74,7 @@ export const DATA: Data = {
       title: "Acer Nitro V15",
       description: "Intel i5-13420H, 16GB RAM, 2TB SSD, RTX 3050 6GB",
       category: "Computador",
-      image: "/setup/notebook.webp",
+      image: "./setup/notebook.webp",
     },
     {
       id: "setup2",
@@ -82,21 +82,21 @@ export const DATA: Data = {
       description:
         'Monitor Concórdia Gamer Curvo 27" CZ270F, 100Hz, LED FULL HD, HDMI',
       category: "Periféricos",
-      image: "/setup/monitor.webp",
+      image: "./setup/monitor.webp",
     },
     {
       id: "setup3",
       title: "Teclado Redragon Pollux Lunar White",
       description: "Teclado mecânico gamer, switch blue, K628-RGB-W",
       category: "Periféricos",
-      image: "/setup/teclado.webp",
+      image: "./setup/teclado.webp",
     },
     {
       id: "setup4",
       title: "Mouse Gamer Redragon Cobra",
       description: "Mouse gamer com fio, 12400 DPI, 8 Botões, Preto - M711",
       category: "Periféricos",
-      image: "/setup/mouse.webp",
+      image: "./setup/mouse.webp",
     },
   ],
 };
