@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       "Portfólio de Jonas Max — Desenvolvedor de Software. Projetos, links e equipamentos.",
     images: [
       {
-        url: "./jonas-profile.webp",
+        url: "http://jonasmax.me/jonas-profile.webp",
         width: 1200,
         height: 1200,
         alt: "Jonas Max",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "Jonas Max | Desenvolvedor de Software",
     description:
       "Portfólio de Jonas Max — Desenvolvedor de Software. Projetos, links e equipamentos.",
-    images: ["./jonas-profile.webp"],
+    images: ["http://jonasmax.me/jonas-profile.webp"],
   },
 };
 
