@@ -67,26 +67,7 @@ export const DATA: Data = {
       icon: "mail",
     },
   ],
-  projects: [
-    {
-      id: "proj1",
-      title: "Antigravity API",
-      description:
-        "Uma API RESTful limpa e performática construída para sistemas de análises clínicas.",
-      url: "https://github.com/jonasmax/antigravity-api",
-      image: "/placeholder-300x200.png",
-      tags: ["TypeScript", "Node.js", "SOLID", "FSD"],
-    },
-    {
-      id: "proj2",
-      title: "Clinical Mobile App",
-      description:
-        "Aplicativo móvel desenvolvido em React Native para médicos acessarem laudos originais.",
-      url: "https://github.com/jonasmax/clinical-app",
-      image: "/placeholder-300x200.png",
-      tags: ["React Native", "TailwindCSS", "React Query"],
-    },
-  ],
+  projects: [],
   setup: [
     {
       id: "setup1",

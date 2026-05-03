@@ -3,6 +3,7 @@ import { DATA } from "@/constants/data";
 import { ProjectCard } from "./project-card";
 import { SetupList } from "./setup-list";
 import { FadeInUp } from "@/components/shared/fade-in-up";
+import { GitHubProjects } from "./github-projects";
 
 export function ContentTabs() {
   return (
@@ -21,17 +22,21 @@ export function ContentTabs() {
           value="projects"
           className="focus-visible:outline-none focus-visible:ring-0 mt-0"
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 ">
-            {DATA.projects.map((project, index) => (
-              <FadeInUp
-                key={project.id}
-                delay={0.1 + index * 0.1}
-                className="h-full"
-              >
-                <ProjectCard project={project} />
-              </FadeInUp>
-            ))}
-          </div>
+          {DATA.projects.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              {DATA.projects.map((project, index) => (
+                <FadeInUp
+                  key={project.id}
+                  delay={0.1 + index * 0.1}
+                  className="h-full"
+                >
+                  <ProjectCard project={project} />
+                </FadeInUp>
+              ))}
+            </div>
+          ) : (
+            <GitHubProjects />
+          )}
         </TabsContent>
 
         <TabsContent
