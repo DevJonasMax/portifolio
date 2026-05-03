@@ -60,7 +60,9 @@ function repoToProjectItem(repo: GitHubRepo): ProjectItem {
 
   return {
     id: String(repo.id),
-    title: repo.name.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
+    title: repo.name
+      .replace(/-/g, " ")
+      .replace(/\b\w/g, (c) => c.toUpperCase()),
     description: repo.description ?? "Sem descrição disponível.",
     url: repo.html_url,
     image: `https://opengraph.githubassets.com/1/${GITHUB_USERNAME}/${repo.name}`,
@@ -73,6 +75,8 @@ type FetchState =
   | { status: "loading" }
   | { status: "error"; message: string }
   | { status: "success"; projects: ProjectItem[] };
+
+const EXCLUDED_REPOS = [GITHUB_USERNAME, `${GITHUB_USERNAME}.github.io`];
 
 export function GitHubProjects() {
   const [state, setState] = useState<FetchState>({ status: "loading" });
@@ -100,7 +104,12 @@ export function GitHubProjects() {
         if (!cancelled) {
           const filtered = repos
             .filter((repo) => !repo.fork)
-            .filter((repo) => repo.name.toLowerCase() !== GITHUB_USERNAME.toLowerCase())
+            .filter(
+              (repo) =>
+                !EXCLUDED_REPOS.map((repo) => repo.toLowerCase()).includes(
+                  repo.name.toLowerCase(),
+                ),
+            )
             .sort((a, b) => b.stargazers_count - a.stargazers_count);
 
           setState({
@@ -173,7 +182,11 @@ export function GitHubProjects() {
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
       {state.status === "success" &&
         state.projects.map((project, index) => (
-          <FadeInUp key={project.id} delay={0.05 + index * 0.07} className="h-full">
+          <FadeInUp
+            key={project.id}
+            delay={0.05 + index * 0.07}
+            className="h-full"
+          >
             <ProjectCard project={project} />
           </FadeInUp>
         ))}
