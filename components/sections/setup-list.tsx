@@ -20,7 +20,7 @@ export function SetupList() {
                 className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
               />
             </div>
-            <CardHeader className="w-full p-4 sm:p-5 flex flex-row items-start justify-between gap-4">
+            <CardHeader className="w-full p-4 sm:p-5 flex flex-col lg:flex-row items-start justify-between gap-4">
               <div className="space-y-1">
                 <CardTitle className="text-base sm:text-lg">
                   {item.title}
