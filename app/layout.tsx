@@ -6,6 +6,26 @@ export const metadata: Metadata = {
   title: "Jonas Max | Desenvolvedor de Software",
   description:
     "Portfólio de Jonas Max — Desenvolvedor de Software. Projetos, links e equipamentos.",
+  openGraph: {
+    title: "Jonas Max | Desenvolvedor de Software",
+    description:
+      "Portfólio de Jonas Max — Desenvolvedor de Software. Projetos, links e equipamentos.",
+    images: [
+      {
+        url: "/jonas-profile.webp",
+        width: 1200,
+        height: 1200,
+        alt: "Jonas Max",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jonas Max | Desenvolvedor de Software",
+    description:
+      "Portfólio de Jonas Max — Desenvolvedor de Software. Projetos, links e equipamentos.",
+    images: ["/jonas-profile.webp"],
+  },
 };
 
 export default function RootLayout({
