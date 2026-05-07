@@ -22,6 +22,9 @@ export function ProjectCard({ project }: { project: ProjectItem }) {
             src={project.image}
             alt={project.title}
             className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+            onError={(e) => {
+              e.currentTarget.src = "/placeholder-300x200.webp";
+            }}
           />
         </div>
         <CardHeader className="p-5">
